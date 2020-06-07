@@ -37,11 +37,15 @@ public class Main {
 
         System.out.println(painting.toString());
         System.out.println(painting.hashCode());
+        System.out.println("To JSON " + painting.toJSON());
+        System.out.println("To XML " + painting.toXML());
+        painting.toConsole();
 
         //Bike Frame extend class
 
         BikeFrame Bike = new BikeFrame("red",2,false,2);
         Bike.setHeight(5);
         System.out.println(Bike);
+
     }
 }

@@ -20,7 +20,7 @@ package com.company;
 
 import java.util.Objects;
 
-public class Parallelogram {
+public class Parallelogram implements IGeometry, IPackaging{
 
     private int height;
     private double angle;
@@ -132,5 +132,30 @@ public class Parallelogram {
     @Override
     public int hashCode() {
         return Objects.hash(getHeight(), getBase());
+    }
+    // Interface realization
+    @Override
+    public String toJSON() {
+        String json = "Parallelogram{"
+                + "\""  + "Area\":" + this.getArea()
+                + ","
+                + "\""  + "Perimeter\":" + this.getPerimeter()
+                + "}";
+        return json;
+    }
+
+    @Override
+    public String toXML() {
+        String xml = "<Parallelogram>"
+                + "<area>" + this.getArea() + "<area>"
+                + "<perimeter>" + this.getPerimeter() + "<perimeter>"
+                +  "</Parallelogram>";
+
+        return xml;
+    }
+
+    @Override
+    public void toConsole() {
+
     }
 }
