@@ -27,11 +27,21 @@ public class Main {
 	double angle =4;
 	int base = 6;
 
-        Parallelogram painting = new Parallelogram(3,4,5,6);
+        Parallelogram painting = new Parallelogram(3,
+                4,
+                5,
+                6);
         painting.setAngle(3);
         painting.setBase(4);
         painting.setHeight(6);
 
         System.out.println(painting.toString());
+        System.out.println(painting.hashCode());
+
+        //Bike Frame extend class
+
+        BikeFrame Bike = new BikeFrame("red",2,false,2);
+        Bike.setHeight(5);
+        System.out.println(Bike);
     }
 }
