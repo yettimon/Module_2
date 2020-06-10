@@ -15,23 +15,23 @@ package com.company;
 
 public class BikeFrame extends Parallelogram{
 
-    String FrameColor;
-    int FrameMaterial;
-    boolean FrameAmortization;
-    int FramePrice;
+    private String FrameColor;
+    private int FrameMaterial;
+    private boolean FrameAmortization;
+    private int FramePrice;
 
     public BikeFrame(int height, double angle, int base, int side, String frameColor, int frameMaterial, boolean frameAmortization, int framePrice) {
         super(height, angle, base, side);
-        FrameColor = frameColor;
-        FrameMaterial = frameMaterial;
-        FrameAmortization = frameAmortization;
-        FramePrice = framePrice;
+        this.FrameColor = frameColor;
+        this.FrameMaterial = frameMaterial;
+        this.FrameAmortization = frameAmortization;
+        this.FramePrice = framePrice;
     }
 
     public BikeFrame(String frameColor, int frameMaterial, boolean frameAmortization, int framePrice) { FrameColor = frameColor;
-       FrameMaterial = frameMaterial;
-       FrameAmortization = frameAmortization;
-       FramePrice = framePrice;
+       this.FrameMaterial = frameMaterial;
+       this.FrameAmortization = frameAmortization;
+       this.FramePrice = framePrice;
     }
 
     public String getFrameColor() {
@@ -47,7 +47,7 @@ public class BikeFrame extends Parallelogram{
     }
 
     public void setFrameMaterial(int frameMaterial) {
-        FrameMaterial = frameMaterial;
+        this.FrameMaterial = frameMaterial;
     }
 
     public boolean isFrameAmortization() {
@@ -55,7 +55,7 @@ public class BikeFrame extends Parallelogram{
     }
 
     public void setFrameAmortization(boolean frameAmortization) {
-        FrameAmortization = frameAmortization;
+        this.FrameAmortization = frameAmortization;
     }
 
     public int getFramePrice() {
@@ -63,7 +63,7 @@ public class BikeFrame extends Parallelogram{
     }
 
     public void setFramePrice(int framePrice) {
-        FramePrice = framePrice;
+        this.FramePrice = framePrice;
     }
 
     public int getBikePrice() {
