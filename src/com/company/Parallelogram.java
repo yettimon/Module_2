@@ -153,7 +153,7 @@ public class Parallelogram implements IGeometry, IPackaging{
 
         return xml;
     }
-
+    // adding console view
     @Override
     public String toConsole() {
     String console = "Parameters of Parallelogram" + "\n"
