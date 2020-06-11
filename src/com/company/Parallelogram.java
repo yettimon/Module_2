@@ -155,7 +155,11 @@ public class Parallelogram implements IGeometry, IPackaging{
     }
 
     @Override
-    public void toConsole() {
+    public String toConsole() {
+    String console = "Parameters of Parallelogram" + "\n"
+            + "Area = " + this.getArea() + "\n"
+            + "Perimeter = " + this.getPerimeter() + "\n";
 
+        return console;
     }
 }

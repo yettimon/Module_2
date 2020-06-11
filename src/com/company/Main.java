@@ -37,9 +37,12 @@ public class Main {
 
         System.out.println(painting.toString());
         System.out.println(painting.hashCode());
+        // JSON code
         System.out.println("To JSON " + painting.toJSON());
-        System.out.println("To XML " + painting.toXML());
-        painting.toConsole();
+        // XML code
+        System.out.println("To XML " + painting.toXML() + "\n");
+        // Console view
+        System.out.println("To Console "+ painting.toConsole());
 
         //Bike Frame extend class
 
