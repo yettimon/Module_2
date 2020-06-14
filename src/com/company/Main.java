@@ -19,6 +19,7 @@
 package com.company;
 
 import java.awt.*;
+import java.time.LocalDate;
 
 public class Main {
 
@@ -49,6 +50,30 @@ public class Main {
         BikeFrame Bike = new BikeFrame("red",2,false,2);
         Bike.setHeight(5);
         System.out.println(Bike);
+
+
+        Student Ivan = new Student.Builder()
+                .setFirstName("Dmitriy")
+                .setLastName("Stavnichuk")
+                .setPatronymic("Oleksandrovich")
+                .setStudLogin("Dimasta")
+                .setStudPassword("Dima132")
+                .setBirthday(LocalDate.of(1998,8,12))
+                .setPhoneNumber("3809231231")
+                .setRecordBook("123123A")
+                .setDepartmentName("IFTKN")
+                .setSpeciality("Computer Science")
+                .setCourseNum(5)
+                .setGroupNum(543)
+                .setIsMilitary(false)
+                .setBachelor(true)
+                .setMagician(false)
+                .setHasGrant(false)
+                .setAvgMark(4)
+                .setHadRetake(false)
+                .setBudgetBasis("Budget")
+                .build();
+        System.out.println(Ivan);
 
     }
 }
