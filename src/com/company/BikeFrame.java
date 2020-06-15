@@ -14,60 +14,67 @@ Create another class as a super class for your one.  Or create a daughterly clas
 package com.company;
 
 public class BikeFrame extends Parallelogram{
+    // privates
+    private String frameColor;
+    private int frameMaterial;
+    private boolean frameAmortization;
+    private int framePrice;
 
-    private String FrameColor;
-    private int FrameMaterial;
-    private boolean FrameAmortization;
-    private int FramePrice;
-
-    public BikeFrame(int height, double angle, int base, int side, String frameColor, int frameMaterial, boolean frameAmortization, int framePrice) {
+    public BikeFrame(int height,
+                     double angle,
+                     int base,
+                     int side,
+                     String frameColor,
+                     int frameMaterial,
+                     boolean frameAmortization,
+                     int framePrice) {
         super(height, angle, base, side);
-        this.FrameColor = frameColor;
-        this.FrameMaterial = frameMaterial;
-        this.FrameAmortization = frameAmortization;
-        this.FramePrice = framePrice;
+        this.frameColor = frameColor;
+        this.frameMaterial = frameMaterial;
+        this.frameAmortization = frameAmortization;
+        this.framePrice = framePrice;
     }
 
     public BikeFrame(String frameColor, int frameMaterial, boolean frameAmortization, int framePrice) {
-        this.FrameColor = frameColor;
-        this.FrameMaterial = frameMaterial;
-        this.FrameAmortization = frameAmortization;
-        this.FramePrice = framePrice;
+        this.frameColor = frameColor;
+        this.frameMaterial = frameMaterial;
+        this.frameAmortization = frameAmortization;
+        this.framePrice = framePrice;
     }
 
     public BikeFrame(int height, double angle, int base, int side) {
     }
 
     public String getFrameColor() {
-        return FrameColor;
+        return frameColor;
     }
 
     public void setFrameColor(String frameColor) {
-        this.FrameColor = frameColor;
+        this.frameColor = frameColor;
     }
 
     public int getFrameMaterial() {
-        return FrameMaterial;
+        return frameMaterial;
     }
 
     public void setFrameMaterial(int frameMaterial) {
-        this.FrameMaterial = frameMaterial;
+        this.frameMaterial = frameMaterial;
     }
 
     public boolean isFrameAmortization() {
-        return FrameAmortization;
+        return frameAmortization;
     }
 
     public void setFrameAmortization(boolean frameAmortization) {
-        this.FrameAmortization = frameAmortization;
+        this.frameAmortization = frameAmortization;
     }
 
     public int getFramePrice() {
-        return FramePrice;
+        return framePrice;
     }
 
     public void setFramePrice(int framePrice) {
-        this.FramePrice = framePrice;
+        this.framePrice = framePrice;
     }
 
     public int getBikePrice() {
@@ -77,10 +84,10 @@ public class BikeFrame extends Parallelogram{
     @Override
     public String toString() {
         return "BikeFrame{" + "\n" +
-                " FrameColor='" + FrameColor + '\'' + "\n" +
-                " FrameMaterial='" + FrameMaterial + '\'' + "\n" +
-                " FrameAmortization=" + FrameAmortization + "\n" +
-                " FramePrice=" + FramePrice + "\n" +
+                " FrameColor='" + frameColor + '\'' + "\n" +
+                " FrameMaterial='" + frameMaterial + '\'' + "\n" +
+                " FrameAmortization=" + frameAmortization + "\n" +
+                " FramePrice=" + framePrice + "\n" +
                 " FrameArea=" + super.getArea() + "\n" +
                 " FrameHeight=" + super.getHeight() + "\n" +
                 " FramePerimeter=" + super.getPerimeter() + "\n" +
