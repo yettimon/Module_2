@@ -15,6 +15,9 @@
 4. Override toString() method
 5. Override hash() and equals() methods.
 *
+*
+* My figure is Parallelogram
+*
 * */
 package com.company;
 

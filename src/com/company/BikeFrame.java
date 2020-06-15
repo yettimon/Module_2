@@ -35,6 +35,9 @@ public class BikeFrame extends Parallelogram{
         this.FramePrice = framePrice;
     }
 
+    public BikeFrame(int height, double angle, int base, int side) {
+    }
+
     public String getFrameColor() {
         return FrameColor;
     }

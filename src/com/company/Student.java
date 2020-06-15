@@ -3,6 +3,7 @@
 * Classame : Student
 *
 *  14 June 2020
+*  version 1.0
 *
 * Copyright Stavnichuk Dmytro
 *
@@ -13,6 +14,7 @@ Develop for your class
 2. Abstract factory.
 3. Create a class Student  - 25 fields.
 4.  Create a builder for the class Student/
+*  My figure is Parallelogram
 * */
 package com.company;
 
@@ -20,7 +22,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Student {
-
+    // variables creation
     private String firstName;
     private String lastName;
     private String patronymic;
@@ -41,7 +43,7 @@ public class Student {
     private boolean hadRetake; // had student exam's retake or no
     private String budgetBasis; // paid or free study
 
-
+    // constructor's
     public Student() {
     }
 
@@ -84,7 +86,7 @@ public class Student {
         this.budgetBasis = budgetBasis;
         this.patronymic = patronymic;
     }
-
+        // getters + setters
     public String getPatronymic() {
         return patronymic;
     }
@@ -236,7 +238,7 @@ public class Student {
     public void setBudgetBasis(String budgetBasis) {
         this.budgetBasis = budgetBasis;
     }
-
+    // equals and hash methods
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -285,7 +287,7 @@ public class Student {
                 getHadRetake(),
                 getBudgetBasis());
     }
-
+    // toString method
     @Override
     public String toString() {
         return "Student{" + "\n" +
@@ -310,12 +312,37 @@ public class Student {
                 "budgetBasis= " + budgetBasis + "\n" +
                 '}';
     }
-
+    // creation of builder for class student
     public static class Builder {
         private Student studentToBuild;
 
         public Builder() {
+
             this.studentToBuild = new Student();
+        }
+
+        public Builder setSimilarTo(Student student){
+            this.studentToBuild.firstName = student.firstName;
+            this.studentToBuild.lastName = student.lastName;
+            this.studentToBuild.studLogin = student.studLogin;
+            this.studentToBuild.studPassword = student.studPassword;
+            this.studentToBuild.birthday = student.birthday;
+            this.studentToBuild.phoneNumber = student.phoneNumber;
+            this.studentToBuild.recordBook = student.recordBook;
+            this.studentToBuild.departmentName = student.departmentName;
+            this.studentToBuild.speciality = student.speciality;
+            this.studentToBuild.courseNum = student.courseNum;
+            this.studentToBuild.groupNum = student.groupNum;
+            this.studentToBuild.isMilitary = student.isMilitary;
+            this.studentToBuild.isBachelor = student.isBachelor;
+            this.studentToBuild.isMagician = student.isMagician;
+            this.studentToBuild.hasGrant = student.hasGrant;
+            this.studentToBuild.avgMark = student.avgMark;
+            this.studentToBuild.hadRetake = student.hadRetake;
+            this.studentToBuild.budgetBasis = student.budgetBasis;
+            this.studentToBuild.patronymic = student.patronymic;
+
+            return this;
         }
 
         public Builder setFirstName(String firstName){
@@ -394,6 +421,8 @@ public class Student {
             studentToBuild.setBudgetBasis(budgetBasis);
             return this;
         }
+
+
 
 
         Student build(){

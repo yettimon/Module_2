@@ -24,6 +24,7 @@ import java.time.LocalDate;
 public class Main {
 
     public static void main(String[] args) {
+        //creation parallelogram withoud interfaces
 	int height = 3;
 	double angle =4;
 	int base = 6;
@@ -51,7 +52,13 @@ public class Main {
         Bike.setHeight(5);
         System.out.println(Bike);
 
+        //ParallelogramFactory creation of parallelogram with factory pattern
+        Parallelogram parallelogram1 = ParallelogramFactory.create(3,4,6,8);
+        System.out.println("Creating parallelogram using ParallelogramFactory "+ parallelogram1);
 
+        //ParallelogramAbstractFactory
+
+        // builder for class student
         Student Ivan = new Student.Builder()
                 .setFirstName("Dmitriy")
                 .setLastName("Stavnichuk")
