@@ -20,7 +20,7 @@ Develop for your class
 package com.company;
 
 public class ParallelogramAbstractFactory {
-
+    //creation of AbstractFactory for Parallelogram and BikeFrame
     public static  IGeometry create(int height,
                                     double angle,
                                     int base,
