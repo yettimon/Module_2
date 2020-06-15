@@ -56,7 +56,6 @@ public class Main {
         Parallelogram parallelogram1 = ParallelogramFactory.create(3,4,6,8);
         System.out.println("Creating parallelogram using ParallelogramFactory "+ parallelogram1);
 
-        //ParallelogramAbstractFactory
 
         // builder for class student
         Student Ivan = new Student.Builder()
