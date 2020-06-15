@@ -35,7 +35,10 @@ public class BikeFrame extends Parallelogram{
         this.framePrice = framePrice;
     }
 
-    public BikeFrame(String frameColor, int frameMaterial, boolean frameAmortization, int framePrice) {
+    public BikeFrame(String frameColor,
+                     int frameMaterial,
+                     boolean frameAmortization,
+                     int framePrice) {
         this.frameColor = frameColor;
         this.frameMaterial = frameMaterial;
         this.frameAmortization = frameAmortization;
